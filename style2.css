@@ -1,0 +1,27 @@
+.navbar-brand {
+    margin-right: 35px;
+}
+
+/* .title {
+    color: black;
+    font-size: 25px;
+    margin-right: 50px;
+    font-weight: bold;
+    margin-left: 0px;
+} */
+
+.container-fluid {
+    background-color: white;  
+}
+
+.nav {
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.nav a:hover {
+    /* background: #ddd; */
+    /* transition: 0.5s; */
+    /* text-transform: uppercase; */
+    border-bottom: 3px solid #0074e1;
+}
