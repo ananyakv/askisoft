@@ -18,6 +18,10 @@
 <script src="tab.js"></script>
 <script src="form.js"></script>
 
+<!-- Recaptcha -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     </head>
@@ -282,7 +286,10 @@
           </form>
 
           <div class="text-center text-md-left">
-              <a class="btn btn-primary" onclick="validateForm();">Send</a>
+              <a class="btn btn-primary" class="g-recaptcha" 
+              data-sitekey="reCAPTCHA_site_key" 
+              data-callback='onSubmit' 
+              data-action='submit' onclick="validateForm();">Send</a>
           </div>
           <div class="status"></div>
       </div>
@@ -292,15 +299,11 @@
       <div class="col-md-3 text-center">
           <ul class="list-unstyled mb-0" style="color: black;">
               <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                  <p>Fremont, CA, USA</p>
-              </li>
-
-              <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                  <p>+ 01 234 567 89</p>
+                  <p><img src="askisoftAddress.png" width="170px" height="100px"></img></p>
               </li>
 
               <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                  <p>contact@askisoft.com</p>
+                  <p>admin@askisoft.com</p>
               </li>
           </ul>
       </div>
@@ -313,6 +316,10 @@
 
 <script>
   document.getElementById("defaultOpen").click();
+  // Recaptcha:
+  function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
 </script>
      
     </body>
